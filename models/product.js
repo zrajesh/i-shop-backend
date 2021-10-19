@@ -4,11 +4,11 @@ const {Schema} = mongoose;
 const {ObjectId} = Schema;
 
 const productSchema = new Schema({
-    name: {
+    title: {
         type: String,
         trim: true,
         required: true,
-        maxlength: 36,
+        maxlength: 200
     },
     description: {
         type: String,
@@ -30,6 +30,14 @@ const productSchema = new Schema({
     imageUrl: {
         type: String,
         required: true
+    },
+    rating: {
+        rate: {
+            type: Number
+        },
+        count: {
+            type: Number
+        }
     }
 }, {timestamps: true});
 

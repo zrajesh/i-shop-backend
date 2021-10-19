@@ -17,9 +17,9 @@ exports.getProductById = (req, res, next, id) => {
 
 // Create product
 exports.createProduct = (req, res) => {
-    const {name, description, price, category, imageUrl} = req.body;
+    const {title, description, price, category, imageUrl} = req.body;
     if (
-        !name ||
+        !title ||
         !description ||
         !price ||
         !category ||
